@@ -25,11 +25,6 @@
         a:hover {
             cursor: pointer;
         }
-        @media (max-width: 360px) {
-            body {
-                font-size: 42px;
-            }
-        }
         .content {
             font-size: 56px;
             text-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
@@ -42,11 +37,17 @@
             align-items: center;
             justify-content: center;
         }
+        @media (max-width: 400px) {
+            .content {
+                font-size: 42px;
+            }
+        }
         .header img {
             width: 100%;
             padding: 0 20px;
             max-width: 600px;
             height: auto;
+            box-sizing: border-box;
         }
         .green {
             background-color: #84CD74;
@@ -111,7 +112,10 @@
     </div>
     <div class="yellow">
         <div class="content video-content">
-            <video class="video" src="video.webm" autoplay muted loop onclick="this.muted = !this.muted" />
+            <video class="video" autoplay muted loop onclick="this.muted = !this.muted">
+                <source src="video.webm" type="video/webm">
+                <source src="video.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
     <div class="light-orange">
@@ -121,7 +125,7 @@
     </div>
     <div class="pink">
         <div class="content">
-            <img class="fox" src="Fox.png" alt="Fox" width="250" />
+            <img class="fox" src="Fox.png" alt="Fox" style="width: 250px; height: auto;" />
         </div>
     </div>
     <div class="light-blue">
@@ -131,7 +135,7 @@
     </div>
     <div class="peach">
         <div class="content">
-            <img class="banana" src="Banana.png" alt="Banana" width="400" />
+            <img class="banana" src="Banana.png" alt="Banana" style="width: 400px; height: auto;" />
         </div>
     </div>
     <div class="green">
@@ -143,7 +147,7 @@
         <div class="content">
             <a href="https://apps.apple.com/us/app/readaboo/id1583223160">Download now!</a>
         </div>
-        <img class="giraffe" src="Giraffe.png" alt="Giraffe" width="300" />
+        <img class="giraffe" src="Giraffe.png" alt="Giraffe" style="width: 300px; height: auto;" />
     </div>
     <div class="footer">&copy; 2022 <a href="https://www.uova.fi">Uova</a></div>
 </body>
